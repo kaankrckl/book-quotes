@@ -1,5 +1,4 @@
 # Book Quotes
-Angular with PHP-Mysql Backend 
 
 <b>How to setup the project</b>
 
