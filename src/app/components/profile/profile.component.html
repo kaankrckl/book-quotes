@@ -1,0 +1,38 @@
+<div class="container">
+    <button id="logout" (click)="logout()">Logout</button>
+    <div class="quote">
+        <p>{{default}} {{quote.quote}}</p>
+        <p>{{quote.source}}</p>
+    </div>
+
+
+    <button id="red" (click)="bringQuote()">Bring a Quote</button>
+    <button id="blue"(click)="tweetQuote()">Tweet a Quote</button>
+
+    <div *ngIf="buttonClicked">
+        <table class="tweets">
+            <thead>
+                <tr>
+                    <th>My Tweets</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let tweet of quoteList | paginate : { id: 'listing_pagination',
+                itemsPerPage: 10,
+                currentPage: page,
+                totalItems: totalRecords }">
+                    <td>{{tweet.title}}</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div class="pager">
+            <pagination-controls id="listing_pagination" maxSize="5" directionLinks="true" (pageChange)="page= $event"></pagination-controls>
+        </div>
+    </div>
+
+    <div *ngFor="let item of filtered">
+        <p>{{item.title}}</p>
+    </div>
+
+</div>

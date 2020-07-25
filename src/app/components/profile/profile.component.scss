@@ -1,0 +1,60 @@
+
+.container{
+    
+    text-align: center;
+}
+td{
+    border-bottom: 0.5px solid gray;
+    //white-space: pre;
+    white-space: pre-wrap;
+    padding: 5px;
+    text-align: left;
+    word-wrap: break-word;
+}
+.quote{
+    margin: auto;
+    padding-top: 15px;
+    width: 50%;
+    min-height: 125px;
+    height: auto;
+    background: gray;
+    border-radius: 5px;
+}
+button{
+    margin: 5px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    font-size: 14px;
+    outline: none;
+    background: black;
+}
+button:active{
+    outline: none;
+}
+button:hover{
+    cursor: pointer;
+}
+.tweets{
+    width: 50%;
+    text-align: center;
+    margin:  auto;
+    table-layout: fixed;
+}
+.pager{
+    padding-right: 40px;
+}
+
+#logout{
+    float: right;
+    margin-top: 0;
+    background: none;
+    text-decoration: underline;
+    color: black;
+}
+
+@media only screen and (max-width: 600px) {
+    .tweets{
+        width: 100%;;
+    }
+}

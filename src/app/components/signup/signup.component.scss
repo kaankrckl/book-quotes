@@ -1,0 +1,71 @@
+.container{
+    text-align: center;
+}
+
+.signForm{
+    width: 50%;
+    min-height: calc(100vh - 65px);
+    display: inline-block;
+    margin: 0;
+    
+    
+}
+.formBox{
+    margin: 25px;
+}
+a{
+    display: block;
+    color: black;
+    padding-top: 15px;
+    font-size: 14px;
+}
+
+input{
+    height: 38px;
+    width: 303px;
+    border: 2px solid gray;
+    padding: 15px;
+    margin: 15px auto;
+    display: block;
+    font-size: 15px;
+    border-radius: 5px;
+    outline: none;
+    
+}
+form{
+    top: 30%;
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+    padding-top: 20%;
+
+    
+}
+
+*{
+    box-sizing: border-box;
+}
+h4{
+    padding-left: 0;
+}
+#sign { 
+    border-radius: 5px;
+    border: none;
+    background: black;
+    color: white
+}
+
+#submit{
+    height: 38px;
+    width: 303px;
+    background: black;
+    color: white;
+    border-radius: 5px;
+    border: none;
+}
+#submit:hover { 
+    cursor: pointer;
+}
+.warning{
+    color: red;
+}

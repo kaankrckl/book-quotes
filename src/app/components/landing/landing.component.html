@@ -1,0 +1,28 @@
+<div class="container">
+
+    <div class="signForm">
+        <form #userForm="ngForm"  action="" defaultButton="submit" (ngSubmit)="loginUser()">
+
+            <div>
+                <p >
+                     Dont have an account yet ? <button type="button" routerLink="/registration" id="sign">Sign up</button>
+                </p>
+            </div>
+
+
+            <div class="formBox">
+                <input class="txtField" type="text" id="email" name="un" [(ngModel)]="user.un" placeholder="Username">
+            </div>
+        
+            <div class="formBox">
+                <input class="txtField" type="password" name="pw" id="password" [(ngModel)]="user.pw" placeholder="Password">
+            </div>
+            <p class="warning" *ngIf="err">*{{warning}}</p>
+
+            <div class="formBox">
+                <input type="submit" name="save" id="submit" value="Login">
+            </div>
+        </form>
+    </div>
+    
+    </div>
