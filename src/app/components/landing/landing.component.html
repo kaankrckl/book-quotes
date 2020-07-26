@@ -1,5 +1,5 @@
 <div class="container">
-
+    <app-title title="Login Page"></app-title>
     <div class="signForm">
         <form #userForm="ngForm"  action="" defaultButton="submit" (ngSubmit)="loginUser()">
 
@@ -17,11 +17,12 @@
             <div class="formBox">
                 <input class="txtField" type="password" name="pw" id="password" [(ngModel)]="user.pw" placeholder="Password">
             </div>
-            <p class="warning" *ngIf="err">*{{warning}}</p>
+            
 
             <div class="formBox">
                 <input type="submit" name="save" id="submit" value="Login">
             </div>
+            <p class="warning" *ngIf="err">*{{warning}}</p>
         </form>
     </div>
     

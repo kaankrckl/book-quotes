@@ -4,10 +4,8 @@
 
 .signForm{
     width: 50%;
-    min-height: calc(100vh - 65px);
     display: inline-block;
     margin: 0;
-    
     
 }
 input{
@@ -34,11 +32,9 @@ a{
     border-radius: 5px;
 }
 form{
-    top: 30%;
     margin: auto;
     text-align: center;
     justify-content: center;
-    padding-top: 20%;
 
     
 }
@@ -72,4 +68,11 @@ button:hover {
 }
 .warning{
     color: red;
+}
+
+@media only screen and (max-width: 600px) {
+    .signForm, #submit, .txtField{
+        width: 100%;;
+    }
+
 }

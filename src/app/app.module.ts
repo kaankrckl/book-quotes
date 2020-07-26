@@ -10,6 +10,7 @@ import { LandingComponent } from './components/landing/landing.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { AuthGuard } from './auth.guard';
+import { TitleComponent } from './components/title/title.component';
 
 
 
@@ -19,6 +20,7 @@ import { AuthGuard } from './auth.guard';
     LandingComponent,
     SignupComponent,
     ProfileComponent,
+    TitleComponent,
   ],
   imports: [
     BrowserModule,

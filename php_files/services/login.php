@@ -15,7 +15,9 @@
        //check if the query return anything
        if($count>0){
         
-        $sonuc['username']=$username;
+        $row = mysqli_fetch_assoc($result);
+        $name = $row['username'];
+        $sonuc['username']=$name;
         $sonuc['success']="Login successful";
       
      }

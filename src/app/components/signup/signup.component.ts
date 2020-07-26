@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RegisterService } from '../../services/register.service';
+import { UserService } from '../../services/user.service';
 import { User } from '../../models/user';
 import { Router } from '@angular/router';
 
@@ -14,7 +14,7 @@ export class SignupComponent implements OnInit {
   warning: string = "";
   err: boolean = false;
 
-  constructor(private router: Router, private register: RegisterService) {
+  constructor(private router: Router, private userServ: UserService) {
     this.user.un="";
     this.user.pw=""; 
    }
@@ -24,7 +24,7 @@ export class SignupComponent implements OnInit {
 
   registerUser(){
     
-        if(!(this.user.un=="") || !((this.user.pw==""))){
+        if(!(this.user.un=="") && !((this.user.pw==""))){
           let postData = new FormData();
     
           for ( let key in this.user ) {
@@ -32,7 +32,7 @@ export class SignupComponent implements OnInit {
             console.log(this.user);
           }
 
-          this.register.register(postData).subscribe( data => {
+          this.userServ.register(postData).subscribe( data => {
             if(data.success){
               this.router.navigate(['/']);
             }

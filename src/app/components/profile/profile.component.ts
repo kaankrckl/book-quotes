@@ -37,6 +37,9 @@ export class ProfileComponent implements OnInit {
     this.getPosts();
     //
 
+
+
+
   }
 
   ngOnInit(): void {
@@ -47,8 +50,12 @@ export class ProfileComponent implements OnInit {
     
     this.quotes.getQuote().subscribe(data =>{ 
       if(data.quote.length + data.source.length+ this.strLen<280){
+        console.log(data.quote.length + data.source.length+ this.strLen);
         this.quote= data, console.log();
         this.default = "";
+      }
+      else{
+        return this.bringQuote();
       }
     }, error=> console.log(error))
   }
@@ -98,6 +105,7 @@ export class ProfileComponent implements OnInit {
 
   getPosts(){
     /*
+    //make the request to gettweets.php file
     this.tweets.getTweets().subscribe(data => {
       this.tweetsList=data
       this.tweetsList.forEach(function (value) {
@@ -108,6 +116,8 @@ export class ProfileComponent implements OnInit {
        this.filtered=this.tweetsList.filter((item)=>{
         return item.text.includes(this.search); 
       });
+      //and finally to display the filtered array we must write 'filtered' instead of 'quoteList' in hmtl file.
+      //since we cant do that we are using quoteList as dummy data
 
       console.log(this.filtered);
     });

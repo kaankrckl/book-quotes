@@ -27,7 +27,7 @@ export class LandingComponent implements OnInit {
 
   loginUser(){
     console.log(this.err)
-    if(!(this.user.un=="") || !((this.user.pw==""))){
+    if(!(this.user.un=="") && !((this.user.pw==""))){
       let postData = new FormData();
 
       for ( let key in this.user ) {

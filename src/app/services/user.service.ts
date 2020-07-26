@@ -9,7 +9,7 @@ import { User } from '../models/user'
   providedIn: 'root'
 })
 export class UserService {
-  url:string="http://localhost/services/login.php";
+  url:string="http://localhost/services/";
 
   constructor(private http: HttpClient) {
     
@@ -17,6 +17,10 @@ export class UserService {
 
    login(postData): Observable<any>{
     //return this.http.post<any>(this.url,user);
-    return this.http.post("http://localhost/services/login.php", postData);
+    return this.http.post(this.url+"login.php", postData);
+  }
+
+  register(postData): Observable<any>{
+    return this.http.post(this.url+"registration.php", postData);
   }
 }

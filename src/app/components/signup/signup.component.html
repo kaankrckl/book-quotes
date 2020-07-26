@@ -1,5 +1,6 @@
 <div class="container">
 
+    <app-title title="Sign Up Page"></app-title>
     <div class="signForm">
         <form #userForm="ngForm"  action="" (ngSubmit)="registerUser()">
 
@@ -10,10 +11,11 @@
             <div class="formBox">
                 <input class="txtField" type="password" name="pw" id="password" [(ngModel)]="user.pw" placeholder="Password">
             </div>
-            <p class="warning" *ngIf="warning">*{{warning}}</p>
+            
             <div class="formBox">
-                <input type="submit" name="save" id="submit" value="Sign Up">
+                <input type="submit" name="save" id="submit" value="Create Account">
             </div>
+            <p class="warning" *ngIf="warning">*{{warning}}</p>
             
         </form>
     </div>
