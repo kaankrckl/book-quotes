@@ -1,5 +1,5 @@
 <?php
-    require"conn.php";
+    include 'conn.php';
 
     //check if post request hast un parameter
     if(isset($_POST['un'])){
